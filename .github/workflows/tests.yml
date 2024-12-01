@@ -3,9 +3,9 @@ name: Tests 7-8
 on:
   push:
     branches:
-      - '**'
+      - "**"
     tags:
-      - '**'
+      - "**"
 
 jobs:
   tests:
@@ -19,4 +19,4 @@ jobs:
       - name: Tests
         uses: Yandex-Practicum/test-project-action@v1
         with:
-          project: 'zakrivayuschiy-teg-f'
+          project: "zakrivayuschiy-teg-f"

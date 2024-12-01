@@ -10,7 +10,7 @@
 */
 
 .page {
-  font-variation-settings: var(--text-font-weight);
+  font-variation-settings: "wght" var(--text-font-weight);
   font-family: var(--main-font-family);
   margin-inline: auto;
   min-inline-size: 320px;
@@ -305,12 +305,6 @@
     -webkit-text-stroke: 1px var(--shadow);
     text-stroke: 1px var(--shadow);
     text-shadow: none;
-  }
-}
-
-@supports (font-variation-settings: normal) {
-  .page {
-    font-family: "var(--main-font-family)", sans-serif;
   }
 }
 

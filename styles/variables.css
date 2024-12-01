@@ -1,1 +1,27 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font-family: Inter, sans-serif;
+  --fantasy-font-family: "Press Start 2P", fantasy;
+  --link-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --heart-color: #ff0000;
+  --contour-color: var(--border-color);
+  --heart-fill: fill;
+  --heart-fill-color: var(--contour-color);
+  --border-color: #000;
+  --page-background: #fff;
+  --inline-size: 100%;
+  --border: 2px;
+  --background-color: #d3d3d3;
+  --background-color-start: #e7e7e7;
+  --background-color-end: #1a1a1a;
+  --border: 3px;
+  --gap: 20px;
+  --like-size: 37px;
+  --button-font-size: 14px;
+  --align-items: center;
+  --transition: 0.3s;
+  --text-color: var(--page-background);
+  --shadow: var(--page-background);
+}

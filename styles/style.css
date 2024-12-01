@@ -4,13 +4,326 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 
 .page {
+  margin-inline: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  max-inline-size: 700px;
+  display: grid;
+  flex-direction: column;
+  align-items: var(--align-items);
+  background: repeating-linear-gradient(
+      90deg,
+      var(--background-color),
+      var(--background-color) 2px,
+      transparent var(--border),
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--background-color-start),
+      var(--background-color-end) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--background-color-start) 0.01%,
+      var(--background-color-end)
+    );
+  background-attachment: fixed;
+  background-size: cover;
+  padding-block-end: 103px;
+  font-family: var(--main-font-family);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: var(--align-items);
+  justify-content: var(--align-items);
+  gap: var(--gap);
+  height: 364px;
+  margin-block: 102px;
+  font-family: var(--fantasy-font-family);
+}
+
+.text-transform__uppercase {
+  text-transform: uppercase;
+}
+
+.text-transform__lowercase {
+  text-transform: lowercase;
+}
+
+.header__link {
+  font-size: var(--link-font-size);
+  text-decoration: none;
+}
+
+.header__title {
+  font-size: var(--title-font-size);
+}
+
+.main {
+  inline-size: var(--inline-size);
+  display: inherit;
+  flex-direction: inherit;
+  gap: 80px;
+}
+
+.border-bottom {
+  border-bottom: var(--border);
+}
+
+.card__button {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+}
+
+.blend__button-text {
+  color: var(--text-color);
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  max-block-size: 38px;
+}
+
+.card__icon-button:focus-visible {
+  outline: var(--border) solid var(--border-color);
+  transition: border 0.3s ease;
+}
+
+.like-button {
+  cursor: pointer;
+  position: relative;
+  overflow: clip;
+}
+
+.like-button:focus-visible {
+  box-shadow: 2px 2px 0 2px var(--border-color);
+}
+
+.like-button::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--border-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.like-button:hover::before {
+  transform: translateX(0);
+}
+
+.button__color {
+  background-color: var(--page-background);
+  color: var(--border-color);
+  outline: var(--border) solid var(--border-color);
+}
+
+.section {
+  display: grid;
+  gap: 52px;
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-family: var(--main-font-family);
+  font-size: 18px;
+}
+
+.image__container {
+  display: flex;
+  border-top: var(--border) solid var(--border-color);
+  border-bottom: var(--border) solid var(--border-color);
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: var(--button-font-size);
+  font-family: var(--fantasy-font-family);
+  opacity: 50%;
+}
+
+.label-stroke {
+  text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow),
+    0 -1px var(---shadow);
+}
+
+.card__image {
+  object-fit: cover;
+  width: var(--inline-size);
+}
+
+.card__text-container {
+  display: grid;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.card__button-container {
+  display: flex;
+  justify-content: right;
+  gap: 12px;
+}
+
+.button {
+  inline-size: 130px;
+  block-size: var(--like-size);
+  font-family: var(--fantasy-font-family);
+  font-size: var(--button-font-size);
+}
+
+.save-button {
+  display: flex;
+  inline-size: 338px;
+  block-size: 54px;
+  justify-self: var(--align-items);
+  align-items: var(--align-items);
+  padding: 0 var(--gap);
+  justify-content: space-between;
+}
+
+.save__dialog {
+  padding: 30px;
+  width: 353px;
+  height: 191px;
+  border: 2px solid var(--border-color);
+  background-color: var(--page-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  inset: 0;
+  transition: var(--transition);
+}
+
+.save-card-icon {
+  mix-blend-mode: difference;
+  color: var(--text-color);
+}
+
+.save__dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.save__dialog-title {
+  font-family: var(--fantasy-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.save-dialog__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+.close__button {
+  cursor: pointer;
+  align-self: center;
+  width: 100%;
+  height: 38px;
+  font-family: var(--fantasy-font-family);
+  font-size: var(--button-font-size);
+}
+
+/*Фильтры*/
+
+.grayscale {
+  filter: grayscale(50%);
+}
+
+.seturation {
+  filter: saturate(300%);
+}
+
+.sepia {
+  filter: sepia(100%);
+}
+
+.multi-sepia {
+  filter: sepia(50%) saturate(150%);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.blur {
+  filter: blur(0.7rem);
+  padding: 10px;
+}
+
+.hue-rotate {
+  filter: hue-rotate(60deg) contrast(70%);
+}
+
+/*Фильтры*/
+
+.is-liked {
+  align-self: center;
+}
+
+.save__dialog::backdrop {
+  background-color: black;
+  opacity: 75%;
+}
+
+@supports (
+  (text-stroke: 1px var(--shadow)) or (-webkit-text-stroke: 1px var(--shadow))
+) {
+  .label-stroke {
+    -webkit-text-stroke: 1px var(--shadow);
+    text-stroke: 1px var(--shadow);
+    text-shadow: none;
+  }
+}
+
+@media (width < 376px) {
+  .header {
+    width: var(--inline-size);
+    height: 323px;
+  }
+
+  .save-button {
+    display: flex;
+    flex-direction: column;
+    align-items: var(--align-items);
+    width: 306px;
+    height: 84px;
+    padding: 15px var(--gap);
+    white-space: nowrap;
+  }
+
+  .label {
+    right: 13px;
+  }
+
+  .save__dialog {
+    max-width: 343px;
+    padding-inline: 42px;
+  }
 }

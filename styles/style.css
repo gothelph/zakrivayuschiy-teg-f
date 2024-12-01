@@ -133,7 +133,7 @@
   outline: var(--border) solid var(--border-color);
 }
 
-.section {
+.main {
   display: grid;
   gap: 52px;
 }
@@ -209,7 +209,7 @@
   justify-content: space-between;
 }
 
-.save__dialog {
+.modal {
   padding: 30px;
   width: 353px;
   height: 191px;
@@ -228,19 +228,19 @@
   color: var(--text-color);
 }
 
-.save__dialog:not([open]) {
+.modal:not([open]) {
   pointer-events: none;
   opacity: 0;
 }
 
-.save__dialog-title {
+.modal-title {
   font-family: var(--fantasy-font-family);
   font-size: var(--button-font-size);
   font-weight: 400;
   line-height: 21px;
 }
 
-.save-dialog__container {
+.modal__container {
   display: grid;
   gap: 20px;
   grid-template-columns: min-content auto;
@@ -293,9 +293,16 @@
   align-self: center;
 }
 
-.save__dialog::backdrop {
+.modal::backdrop {
   background-color: black;
   opacity: 75%;
+}
+
+.footer {
+  margin-block-start: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 @supports (
@@ -328,7 +335,7 @@
     right: 13px;
   }
 
-  .save__dialog {
+  .modal {
     max-width: 343px;
     padding-inline: 42px;
   }

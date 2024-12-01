@@ -3,9 +3,7 @@
 @font-face {
   font-display: swap;
   font-family: "Press Start 2P";
-  src: url(../fonts/PressStart2P-Regular.woff) format("woff"),
-    url(../fonts/PressStart2P-Regular.woff) format("woff supports variations"),
-    url(../fonts/PressStart2P-Regular.woff) format("woff-variations");
+  src: url(../fonts/PressStart2P-Regular.woff) format("woff");
   font-weight: normal bold;
 }
 

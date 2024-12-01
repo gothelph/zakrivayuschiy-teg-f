@@ -674,7 +674,7 @@
       </section>
     </main>
 
-    <dialog id="save-dialog" class="save__dialog">
+    <!-- <dialog open id="save-dialog" class="save__dialog" aria-label="save">
       <div class="save-dialog__container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -696,7 +696,32 @@
           <span class="button__text">ок</span>
         </button>
       </form>
+    </dialog> -->
+
+    <dialog open id="save-dialog" class="save__dialog" aria-label="save">
+      <form method="dialog" class="save-dialog__container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 28 28"
+          width="39"
+          height="39"
+        >
+          <use href="./svg/icons.svg#save-card"></use>
+        </svg>
+        <h2 class="text-transform__uppercase save__dialog-title">
+          Вставьте дискету, чтобы продолжить
+        </h2>
+      </form>
+      <form method="dialog">
+        <button
+          class="close__button text-transform__uppercase button__color"
+          type="submit"
+        >
+          <span class="button__text">ок</span>
+        </button>
+      </form>
     </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>

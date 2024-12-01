@@ -10,7 +10,8 @@
 */
 
 .page {
-  font-variation-settings: var(--text-weight);
+  font-variation-settings: var(--title-font-weight);
+  font-family: var(--main-font-family);
   margin-inline: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;

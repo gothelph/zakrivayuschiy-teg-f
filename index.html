@@ -698,7 +698,7 @@
       </form>
     </dialog> -->
 
-    <dialog open id="save-dialog" class="save__dialog" aria-label="save">
+    <dialog id="save-dialog" class="save__dialog" aria-label="save">
       <form method="dialog" class="save-dialog__container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -715,7 +715,8 @@
       <form method="dialog">
         <button
           class="close__button text-transform__uppercase button__color"
-          type="submit"
+          type="button"
+          onclick="window['save-dialog'].close()"
         >
           <span class="button__text">ок</span>
         </button>

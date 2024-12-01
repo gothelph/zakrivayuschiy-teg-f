@@ -40,6 +40,7 @@
   background-size: cover;
   padding-block-end: 103px;
   font-family: var(--main-font-family);
+  font-variation-settings: var(--text-weight);
 }
 
 .header {
@@ -148,6 +149,11 @@
   border-top: var(--border) solid var(--border-color);
   border-bottom: var(--border) solid var(--border-color);
   position: relative;
+}
+
+.image__container > picture {
+  width: 100%;
+  display: flex;
 }
 
 .label {

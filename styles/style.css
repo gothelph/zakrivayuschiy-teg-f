@@ -10,6 +10,7 @@
 */
 
 .page {
+  font-variation-settings: var(--text-weight);
   margin-inline: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -39,8 +40,6 @@
   background-attachment: fixed;
   background-size: cover;
   padding-block-end: 103px;
-  font-family: var(--main-font-family);
-  font-variation-settings: var(--text-weight);
 }
 
 .header {

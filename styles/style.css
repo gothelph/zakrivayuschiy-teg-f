@@ -10,7 +10,7 @@
 */
 
 .page {
-  font-variation-settings: var(--title-font-weight);
+  font-variation-settings: var(--text-font-weight);
   font-family: var(--main-font-family);
   margin-inline: auto;
   min-inline-size: 320px;

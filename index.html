@@ -687,13 +687,14 @@
           Вставьте дискету, чтобы продолжить
         </h2>
       </div>
-      <button
-        class="close__button text-transform__uppercase button__color"
-        onclick="window['save-dialog'].close()"
-        type="button"
-      >
-        Ок
-      </button>
+      <form method="dialog">
+        <button
+          class="close__button text-transform__uppercase button__color"
+          type="submit"
+        >
+          Ок
+        </button>
+      </form>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>

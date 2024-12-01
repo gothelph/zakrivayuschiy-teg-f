@@ -24,6 +24,6 @@
   --transition: 0.3s;
   --text-color: var(--page-background);
   --shadow: var(--page-background);
-  --title-font-weight: "wght" 785;
-  --text-font-weight: "wght" 400;
+  --title-font-weight: 700;
+  --text-font-weight: 400;
 }

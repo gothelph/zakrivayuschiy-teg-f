@@ -31,4 +31,23 @@
   --letter-spacing-laptop: 0.038rem;
   --letter-spacing-mobile: 1px;
   --word-spacing-mobile: -2.2px;
+  --background-gradient: repeating-linear-gradient(
+      90deg,
+      var(--background-color),
+      var(--background-color) 2px,
+      transparent var(--border),
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--background-color-start),
+      var(--background-color-end) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--background-color-start) 0.01%,
+      var(--background-color-end)
+    );
 }

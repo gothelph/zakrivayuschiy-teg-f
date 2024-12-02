@@ -8,9 +8,9 @@
 Если эти классы поменять в HTML, скрипт перестанет работать. Будьте аккуратны.
 */
 
-const likeHeartArray = document.querySelectorAll('.like-icon');
-const likeButtonArray = document.querySelectorAll('.card__like-button');
-const iconButtonArray = document.querySelectorAll('.card__icon-button');
+const likeHeartArray = document.querySelectorAll(".like-icon");
+const likeButtonArray = document.querySelectorAll(".card__like-button");
+const iconButtonArray = document.querySelectorAll(".card__icon-button");
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
@@ -22,20 +22,40 @@ likeButtonArray.forEach((button, index) => {
 });
 
 function toggleIsLiked(heart, button) {
-  heart.classList.toggle('is-liked');
+  heart.classList.toggle("is-liked");
   setButtonText(heart, button);
 }
 
 function setButtonText(heart, button) {
-  if ([...heart.classList].includes('is-liked')) {
+  if ([...heart.classList].includes("is-liked")) {
     setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Unlike'),
+      () => (button.querySelector(".button__text").textContent = "Unlike"),
       500
     );
   } else {
     setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Like'),
+      () => (button.querySelector(".button__text").textContent = "Like"),
       500
     );
   }
 }
+
+const dialog = document.getElementById("modal");
+const showBtn = document.getElementById("show");
+const closeBtn = document.getElementById("close");
+
+// Setup an event listener for the show button.
+showBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Show the dialog.
+  dialog.show();
+});
+
+// Setup an event listener for the close button.
+closeBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Close the dialog.
+  dialog.close();
+});

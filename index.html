@@ -657,7 +657,7 @@
       <button
         type="button"
         class="button button__color save-button like-button"
-        onclick="window.modal.showModal();"
+        id="show"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -672,7 +672,7 @@
       </button>
 
       <dialog id="modal" class="modal" aria-label="modal">
-        <div class="modal__container">
+        <form class="modal__container">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 28 28"
@@ -684,9 +684,12 @@
           <h2 class="text-transform__uppercase modal-title">
             Вставьте дискету, чтобы продолжить
           </h2>
-        </div>
-        <form method="dialog">
-          <button class="close__button text-transform__uppercase button__color">
+        </form>
+        <form>
+          <button
+            class="close__button text-transform__uppercase button__color"
+            id="close"
+          >
             <span class="button__text">ок</span>
           </button>
         </form>

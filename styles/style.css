@@ -76,6 +76,8 @@
   display: inherit;
   flex-direction: inherit;
   gap: 80px;
+  display: grid;
+  gap: 52px;
 }
 
 .border-bottom {
@@ -131,11 +133,6 @@
   background-color: var(--page-background);
   color: var(--border-color);
   outline: var(--border) solid var(--border-color);
-}
-
-.main {
-  display: grid;
-  gap: 52px;
 }
 
 .card__title {

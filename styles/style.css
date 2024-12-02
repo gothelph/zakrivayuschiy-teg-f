@@ -212,8 +212,6 @@
   border: 2px solid var(--border-color);
   background-color: var(--page-background);
   position: fixed;
-  inset: 0;
-  transition: opacity 0.3s;
   opacity: 0;
   transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete;
   animation: close 0.3s forwards;
@@ -334,23 +332,5 @@
   .modal {
     max-width: 343px;
     padding-inline: 42px;
-  }
-}
-
-@keyframes open {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes close {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }

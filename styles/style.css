@@ -205,34 +205,18 @@
 }
 
 .modal {
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
   width: 353px;
-  height: 191px;
+  height: 193px;
   border: 2px solid var(--border-color);
   background-color: var(--page-background);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   inset: 0;
   transition: var(--transition);
 }
 
-.save-card-icon {
-  mix-blend-mode: difference;
-  color: var(--text-color);
-}
-
-.modal:not([open]) {
-  pointer-events: none;
-  opacity: 0;
-}
-
-.modal-title {
-  font-family: var(--fantasy-font-family);
-  font-size: var(--button-font-size);
-  font-weight: 400;
-  line-height: 21px;
+.modal[open] {
+  gap: 30px;
 }
 
 .modal__container {
@@ -242,6 +226,18 @@
   align-items: center;
 }
 
+.save-card-icon {
+  mix-blend-mode: difference;
+  color: var(--text-color);
+}
+
+.modal-title {
+  font-family: var(--fantasy-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 21px;
+}
+
 .close__button {
   cursor: pointer;
   align-self: center;
@@ -249,6 +245,7 @@
   height: 38px;
   font-family: var(--fantasy-font-family);
   font-size: var(--button-font-size);
+  margin-top: 30px;
 }
 
 /*Фильтры*/

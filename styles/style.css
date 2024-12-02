@@ -205,9 +205,9 @@
 }
 
 .modal {
-  padding: 30px 30px 0px 30px;
-  width: 353px;
-  height: 193px;
+  padding: 30px;
+  max-inline-size: 355px;
+  line-height: 1.5;
   border: 2px solid var(--border-color);
   background-color: var(--page-background);
   position: fixed;
@@ -215,9 +215,9 @@
   transition: var(--transition);
 }
 
-.modal[open] {
+/* .modal[open] {
   gap: 30px;
-}
+} */
 
 .modal__container {
   display: grid;

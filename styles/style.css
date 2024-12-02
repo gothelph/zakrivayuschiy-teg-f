@@ -97,6 +97,7 @@
 
 .card__icon-button {
   max-block-size: 38px;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
@@ -105,9 +106,9 @@
 }
 
 .like-button {
-  cursor: pointer;
   position: relative;
   overflow: clip;
+  cursor: pointer;
 }
 
 .like-button:focus-visible {
@@ -212,7 +213,14 @@
   background-color: var(--page-background);
   position: fixed;
   inset: 0;
-  transition: var(--transition);
+  transition: opacity 0.3s;
+  opacity: 0;
+  transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+  animation: close 0.3s forwards;
+}
+
+.modal[open] {
+  animation: open 0.3s forwards;
 }
 
 .modal__container {
@@ -326,5 +334,23 @@
   .modal {
     max-width: 343px;
     padding-inline: 42px;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

@@ -657,7 +657,7 @@
       <button
         type="button"
         class="button button__color save-button like-button"
-        id="show"
+        onclick="window['modal'].showModal();"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -685,17 +685,13 @@
             Вставьте дискету, чтобы продолжить
           </h2>
         </form>
-        <form>
-          <button
-            class="close__button text-transform__uppercase button__color"
-            id="close"
-          >
+        <form method="dialog">
+          <button class="close__button text-transform__uppercase button__color">
             <span class="button__text">ок</span>
           </button>
         </form>
       </dialog>
     </footer>
-
     <script src="./scripts/like.js"></script>
   </body>
 </html>

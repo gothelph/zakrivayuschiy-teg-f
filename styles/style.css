@@ -73,9 +73,7 @@
 
 .main {
   inline-size: var(--inline-size);
-  display: inherit;
   flex-direction: inherit;
-  gap: 80px;
   display: grid;
   gap: 52px;
 }

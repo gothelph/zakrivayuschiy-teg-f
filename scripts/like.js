@@ -39,23 +39,3 @@ function setButtonText(heart, button) {
     );
   }
 }
-
-const dialog = document.getElementById("modal");
-const showBtn = document.getElementById("show");
-const closeBtn = document.getElementById("close");
-
-// Setup an event listener for the show button.
-showBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  // Show the dialog.
-  dialog.show();
-});
-
-// Setup an event listener for the close button.
-closeBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  // Close the dialog.
-  dialog.close();
-});

@@ -10,11 +10,13 @@
 }
 
 *:focus-visible {
-  outline: transparent;
+  /* outline: transparent; */
 }
 
-body {
+body,
+button {
   margin: 0;
+  border: transparent;
 }
 
 h1,

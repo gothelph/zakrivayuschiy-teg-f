@@ -48,8 +48,8 @@
   flex-direction: column;
   text-align: var(--align-items);
   justify-content: var(--align-items);
-  gap: var(--gap);
-  height: 364px;
+  gap: var(--header-gap);
+  min-height: 364px;
   margin-block: 102px;
   font-family: var(--fantasy-font-family);
 }
@@ -62,7 +62,7 @@
   text-transform: lowercase;
 }
 
-.header__link {
+.header__logo {
   font-size: var(--link-font-size);
   text-decoration: none;
 }
@@ -98,10 +98,11 @@
 .card__icon-button {
   max-block-size: 38px;
   cursor: pointer;
+  border: var(--border) solid transparent;
 }
 
 .card__icon-button:focus-visible {
-  outline: var(--border) solid var(--border-color);
+  border: var(--border) solid var(--border-color);
   transition: border 0.3s ease;
 }
 
@@ -112,7 +113,7 @@
 }
 
 .like-button:focus-visible {
-  box-shadow: 2px 2px 0 2px var(--border-color);
+  box-shadow: 2px 2px 0 0px var(--border-color);
 }
 
 .like-button::before {
@@ -131,13 +132,15 @@
 .button__color {
   background-color: var(--page-background);
   color: var(--border-color);
-  outline: var(--border) solid var(--border-color);
+  border: var(--border) solid var(--border-color);
 }
 
 .card__title {
-  padding: 4px 10px;
-  font-family: var(--main-font-family);
   font-size: 18px;
+  padding: 3px 10px;
+  border-block-end: 2px solid var(--border-color);
+  line-height: 130%;
+  letter-spacing: 0.01rem;
 }
 
 .image__container {
@@ -163,7 +166,7 @@
 
 .label-stroke {
   text-shadow: -1px 0 var(--shadow), 0 1px var(--shadow), 1px 0 var(--shadow),
-    0 -1px var(---shadow);
+    0 -1px var(--shadow);
 }
 
 .card__image {
@@ -178,14 +181,16 @@
 }
 
 .card__text {
+  display: grid;
   font-size: 18px;
-  line-height: 130%;
+  line-height: 118%;
+  letter-spacing: var(--letter-spacing-laptop);
 }
 
 .card__button-container {
   display: flex;
   justify-content: right;
-  gap: 12px;
+  gap: 3px;
 }
 
 .button {
@@ -201,7 +206,7 @@
   block-size: 54px;
   justify-self: var(--align-items);
   align-items: var(--align-items);
-  padding: 0 var(--gap);
+  padding: 0 var(--button-padding);
   justify-content: space-between;
 }
 
@@ -231,6 +236,7 @@
 .save-card-icon {
   mix-blend-mode: difference;
   color: var(--text-color);
+  max-inline-size: 21px;
 }
 
 .modal-title {
@@ -292,13 +298,6 @@
   opacity: 75%;
 }
 
-.footer {
-  margin-block-start: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 @supports (
   (text-stroke: 1px var(--shadow)) or (-webkit-text-stroke: 1px var(--shadow))
 ) {
@@ -312,7 +311,7 @@
 @media (width < 376px) {
   .header {
     width: var(--inline-size);
-    height: 323px;
+    min-height: 323px;
   }
 
   .save-button {
@@ -321,8 +320,7 @@
     align-items: var(--align-items);
     width: 306px;
     height: 84px;
-    padding: 15px var(--gap);
-    white-space: nowrap;
+    padding: 15px 20px;
   }
 
   .label {
@@ -332,5 +330,15 @@
   .modal {
     max-width: 343px;
     padding-inline: 42px;
+  }
+
+  .save-card-icon {
+    min-width: 28px;
+  }
+
+  .card__text {
+    line-height: 21.05px;
+    letter-spacing: var(--letter-spacing-mobile);
+    word-spacing: var(--word-spacing-mobile);
   }
 }

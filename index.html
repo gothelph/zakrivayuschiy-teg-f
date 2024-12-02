@@ -14,15 +14,13 @@
   </head>
   <body class="page">
     <header class="header button__color">
-      <a href="#" class="header__link text-transform__uppercase"
-        >&lt;/html&gt;</a
-      >
+      <div class="header__logo text-transform__uppercase">&lt;/html&gt;</div>
       <h1 class="header__title text-transform__uppercase">Закрывающий тег</h1>
     </header>
     <main class="main">
       <article class="card button__color">
         <h2 class="card__title">
-          Фритрек и нулевой спринт: Подготовка к работе
+          Фритрек и нулевой спринт: Подготовка&nbsp;к&nbsp;работе
         </h2>
         <div class="image__container">
           <picture>
@@ -51,7 +49,7 @@
             Место для ваших воспоминаний о начале обучения.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +128,7 @@
             Место для ваших воспоминаний о начале первого спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +205,7 @@
             Место для ваших воспоминаний об окончании первого спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +284,7 @@
             Место для ваших воспоминаний о начале второго спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +364,7 @@
             Место для ваших воспоминаний об окончании второго спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -443,7 +441,7 @@
             Место для ваших воспоминаний о начале третьего спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -522,7 +520,7 @@
             Место для ваших воспоминаний об окончании третьего спринта.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +601,7 @@
             этой точке пути.
           </p>
           <div class="card__button-container">
-            <button class="card__button card__icon-button">
+            <button class="card__button card__icon-button" type="button">
               <svg
                 class="like-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -651,9 +649,7 @@
           </div>
         </div>
       </article>
-    </main>
 
-    <footer class="footer">
       <button
         type="button"
         class="button button__color save-button like-button"
@@ -662,36 +658,41 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 28 28"
-          width="21"
-          height="21"
+          width="28"
+          height="28"
           class="save-card-icon"
         >
           <use href="./svg/icons.svg#save-card"></use>
         </svg>
-        <span class="button__text blend__button-text">Сохранить на память</span>
+        <span class="button__text blend__button-text"
+          >Сохранить&nbsp;на&nbsp;память</span
+        >
       </button>
+    </main>
 
-      <dialog id="modal" class="modal" aria-label="modal">
-        <form class="modal__container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 28 28"
-            width="39"
-            height="39"
-          >
-            <use href="./svg/icons.svg#save-card"></use>
-          </svg>
-          <h2 class="text-transform__uppercase modal-title">
-            Вставьте дискету, чтобы продолжить
-          </h2>
-        </form>
-        <form method="dialog">
-          <button class="close__button text-transform__uppercase button__color">
-            <span class="button__text">ок</span>
-          </button>
-        </form>
-      </dialog>
-    </footer>
+    <dialog id="modal" class="modal" aria-label="modal">
+      <form class="modal__container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 28 28"
+          width="39"
+          height="39"
+        >
+          <use href="./svg/icons.svg#save-card"></use>
+        </svg>
+        <h2 class="text-transform__uppercase modal-title">
+          Вставьте дискету, чтобы продолжить
+        </h2>
+      </form>
+      <form method="dialog">
+        <button
+          class="close__button text-transform__uppercase button__color like-button"
+          type="submit"
+        >
+          <span class="button__text blend__button-text">ок</span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

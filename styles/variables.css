@@ -18,12 +18,17 @@
   --background-color: #d3d3d3;
   --background-color-start: #e7e7e7;
   --background-color-end: #1a1a1a;
-  --border: 3px;
-  --gap: 20px;
+  --border: 2px;
+  --header-gap: 20px;
+  --button-padding: 19px;
+  --gap: 25px;
   --like-size: 37px;
   --button-font-size: 14px;
   --align-items: center;
   --transition: 0.3s;
   --text-color: var(--page-background);
   --shadow: var(--page-background);
+  --letter-spacing-laptop: 0.038rem;
+  --letter-spacing-mobile: 1px;
+  --word-spacing-mobile: -2.2px;
 }

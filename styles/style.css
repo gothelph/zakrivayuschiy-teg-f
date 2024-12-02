@@ -215,10 +215,6 @@
   transition: var(--transition);
 }
 
-/* .modal[open] {
-  gap: 30px;
-} */
-
 .modal__container {
   display: grid;
   gap: 20px;

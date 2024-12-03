@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font-family: Inter, sans-serif;
+  --main-font-family: "Inter-Variable", sans-serif;
   --fantasy-font-family: "Press Start 2P", fantasy;
   --title-font-weight: 700;
   --text-font-weight: 400;
@@ -28,9 +28,9 @@
   --transition: 0.3s;
   --text-color: var(--page-background);
   --shadow: var(--page-background);
-  --letter-spacing-laptop: 0.038rem;
-  --letter-spacing-mobile: 1px;
-  --word-spacing-mobile: -2.2px;
+  --word-spacing-laptop: 0.15px;
+  --letter-spacing-mobile: 0.2px;
+  --word-spacing-mobile: -1.2px;
   --background-gradient: repeating-linear-gradient(
       90deg,
       var(--background-color),

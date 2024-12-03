@@ -118,10 +118,10 @@
 
 .card__title {
   font-size: 18px;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-block-end: 2px solid var(--border-color);
-  line-height: 130%;
-  letter-spacing: 0.01rem;
+  line-height: 21.78px;
+  font-variation-settings: "wght" var(--title-font-weight);
 }
 
 .image__container {
@@ -164,8 +164,8 @@
 .card__text {
   display: grid;
   font-size: 18px;
-  line-height: 118%;
-  letter-spacing: var(--letter-spacing-laptop);
+  line-height: 21.08px;
+  word-spacing: var(--word-spacing-laptop);
 }
 
 .card__button-container {
@@ -318,7 +318,7 @@
   }
 
   .card__text {
-    line-height: 21.05px;
+    line-height: 21.04px;
     letter-spacing: var(--letter-spacing-mobile);
     word-spacing: var(--word-spacing-mobile);
   }
